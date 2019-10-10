@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css">
+    <title>Calculadora de Intereses</title>
+</head>
+<body>
+    <!-- Title -->
+    <h1 class="text-center mt-4">Calculadora de Intereses</h1>
+    <div class="container">
+        <div class="row mt-4" id="row">
+            <div class="col">
+                    <div class="row">
+                        <!-- Form -->
+                            <form id="entry">
+                                <div class="col mb-4">
+                                    <div class="form-group">
+                                        <label for="montoInicial">Monto Inicial</label>
+                                        <input type="number" min="0.01" step=".01" class="form-control" id="montoInicial" placeholder="Ingresa tu monto inicial">
+                                        <small class="form-text text-muted">El monto que ingreses aqui sera sobre el que se calcularan los intereses</small>
+                                    </div>
+                                </div>
+                                <div class="col mb-4">
+                                    <div class="form-group">
+                                        <label for="montoInicial">Tasa de Interes</label>
+                                        <input type="number" step=".01" min="0.01" class="form-control" id="interes" placeholder="Ingresa la tasa de interes">
+                                        <small class="form-text text-muted">Podes encontrar esta tasa en los terminos de tu plazo fijo o entrando en tu homebank u App de MercadoPago</small>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                        <button id="calcular" type="submit" class="btn btn-primary">Calcular Ganancias</button>
+                                </div>
+                            </form>
+                    </div>
+            </div>
+            <!-- Ganancias Display -->
+            <div class="col" id="ganancias">
+                    <div class="card mb-4 text-dark ">
+                        <div class="card-header bg-info">Ganancia Anual</div>
+                        <div class="card-body text-center" id="anual"></div>
+                    </div>
+                    <div class="card mb-4 text-dark ">
+                        <div class="card-header bg-danger"> Ganancia Mensual</div>
+                        <div class="card-body text-center" id="mensual"></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-dark bg-success"> Ganancia Diaria</div>
+                        <div class="card-body text-center" id="diaria"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+        <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- App -->
+    <script src="app.js"></script>
+</body>
+</html>
