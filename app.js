@@ -19,7 +19,7 @@ function clearFields() {
 function calcularGanancia(monto,interes) {
     anual = ((monto * interes) / 100).toFixed(2);
     diaria = (anual / 365).toFixed(2);
-    mensual = (diaria * 30).toFixed(2);
+    mensual = (anual / 12).toFixed(2);
 }
 // Show Ganancia in the UI
 function displayGanancia() {
